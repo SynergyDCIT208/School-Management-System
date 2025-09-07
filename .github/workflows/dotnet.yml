@@ -17,13 +17,20 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: '8.0.x'   # change to 6.0.x/7.0.x if needed
+        dotnet-version: '8.0.x'
 
     - name: Restore
-      run: dotnet restore
+      working-directory: SchoolMS
+      run: dotnet restore SchoolMS.sln
 
     - name: Build (Release)
-      run: dotnet build SchoolMS/SchoolMS.sln --configuration Release --no-restore
+      working-directory: SchoolMS
+      run: dotnet build SchoolMS.sln --configuration Release --no-restore
+
+    - name: Test
+      working-directory: SchoolMS
+      run: dotnet test SchoolMS.sln --no-build --verbosity normal
+figuration Release --no-restore
 
     - name: Test
       run: dotnet test SchoolMS/SchoolMS.sln --no-build --verbosity normal
