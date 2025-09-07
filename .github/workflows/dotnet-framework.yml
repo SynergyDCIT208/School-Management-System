@@ -8,20 +8,22 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest   
+    runs-on: windows-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Setup NuGet
-      uses: NuGet/setup-nuget@v2
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v2
 
-    - name: Restore NuGet packages
-      run: nuget restore SchoolMS.sln   
+      - name: Restore NuGet packages
+        run: nuget restore SchoolMS/SchoolMS.sln
+      - name: Setup MSBuild
+        run: msbuild SchoolMS/SchoolMS.sln /t:Build /p:configuration=Release /p:Platform="Any CPU"
 
-    - name: Setup MSBuild
-      uses: microsoft/setup-msbuild@v2
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v2
 
-    - name: Build with MSBuild
-      run: msbuild SchoolMS.sln /t:Build /p:Configuration=Release /p:Platform="Any CPU"
+      - name: Build with MSBuild
+        run: msbuild SchoolMS/SchoolMS.sln /t:Build /p:Configuration=Release /p:Platform="Any CPU"
