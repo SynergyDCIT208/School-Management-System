@@ -1,4 +1,4 @@
-name: .NET CI
+name: .NET Framework CI
 
 on:
   push:
@@ -8,29 +8,20 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest   
 
     steps:
-    - name: Checkout
+    - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: '8.0.x'
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v2
 
-    - name: Restore
-      working-directory: SchoolMS
-      run: dotnet restore SchoolMS.sln
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v2
 
-    - name: Build (Release)
-      working-directory: SchoolMS
-      run: dotnet build SchoolMS.sln --configuration Release --no-restore
+    - name: Restore NuGet packages
+      run: nuget restore SchoolMS.sln   
 
-    - name: Test
-      working-directory: SchoolMS
-      run: dotnet test SchoolMS.sln --no-build --verbosity normal
-figuration Release --no-restore
-
-    - name: Test
-      run: dotnet test SchoolMS/SchoolMS.sln --no-build --verbosity normal
+    - name: Build with MSBuild
+      run: msbuild SchoolMS.sln /p:Configuration=Release
