@@ -20,10 +20,9 @@ jobs:
       - name: Restore NuGet packages
         run: nuget restore SchoolMS/SchoolMS.sln
       - name: Setup MSBuild
-        run: msbuild SchoolMS/SchoolMS.sln /t:Build /p:configuration=Release /p:Platform="Any CPU"
-
-      - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v2
+      - name: Build with MSBuild
+        run: msbuild SchoolMS/SchoolMS.sln /t:Build /p:Configuration=Release /p:Platform="Any CPU"
 
       - name: Build with MSBuild
         run: msbuild SchoolMS/SchoolMS.sln /t:Build /p:Configuration=Release /p:Platform="Any CPU"
