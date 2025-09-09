@@ -27,7 +27,7 @@ jobs:
       - name: Build with MSBuild
         run: msbuild SchoolMS/SchoolMS.sln /t:Build /p:Configuration=Release /p:Platform="Any CPU"
       - name: Upload Build Artifacts
-        uses: action/upload-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
-          name: SchoolMS-Build
+          name: my-artifact
           path: SchoolMS/bin/Release
