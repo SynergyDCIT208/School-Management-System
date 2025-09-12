@@ -31,16 +31,6 @@ CREATE TABLE `academicyear` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `academicyear`
---
-
-LOCK TABLES `academicyear` WRITE;
-/*!40000 ALTER TABLE `academicyear` DISABLE KEYS */;
-INSERT INTO `academicyear` VALUES (1,'2024/2025'),(2,'2025/2026');
-/*!40000 ALTER TABLE `academicyear` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `billing`
 --
 
@@ -64,16 +54,6 @@ CREATE TABLE `billing` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `billing`
---
-
-LOCK TABLES `billing` WRITE;
-/*!40000 ALTER TABLE `billing` DISABLE KEYS */;
-INSERT INTO `billing` VALUES (1,3,7,2),(3,1,3,1);
-/*!40000 ALTER TABLE `billing` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `billingitems`
 --
 
@@ -92,16 +72,6 @@ CREATE TABLE `billingitems` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `billingitems`
---
-
-LOCK TABLES `billingitems` WRITE;
-/*!40000 ALTER TABLE `billingitems` DISABLE KEYS */;
-INSERT INTO `billingitems` VALUES (1,1,'PTA Levy',200.00),(2,1,'School Fees',2192.29),(3,3,'Transport',213.80),(4,3,'Class Book',1289.00);
-/*!40000 ALTER TABLE `billingitems` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `class`
 --
 
@@ -114,16 +84,6 @@ CREATE TABLE `class` (
   PRIMARY KEY (`ClassID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `class`
---
-
-LOCK TABLES `class` WRITE;
-/*!40000 ALTER TABLE `class` DISABLE KEYS */;
-INSERT INTO `class` VALUES (1,'Class one'),(2,'Class Two'),(3,'Class Three');
-/*!40000 ALTER TABLE `class` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `payments`
@@ -148,15 +108,6 @@ CREATE TABLE `payments` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `payments`
---
-
-LOCK TABLES `payments` WRITE;
-/*!40000 ALTER TABLE `payments` DISABLE KEYS */;
-/*!40000 ALTER TABLE `payments` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `religion`
 --
 
@@ -169,16 +120,6 @@ CREATE TABLE `religion` (
   PRIMARY KEY (`religionID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `religion`
---
-
-LOCK TABLES `religion` WRITE;
-/*!40000 ALTER TABLE `religion` DISABLE KEYS */;
-INSERT INTO `religion` VALUES (1,'Catholic'),(2,'Pentecost'),(3,'Charismatic');
-/*!40000 ALTER TABLE `religion` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `student_status`
@@ -195,16 +136,6 @@ CREATE TABLE `student_status` (
   UNIQUE KEY `StatusName` (`StatusName`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `student_status`
---
-
-LOCK TABLES `student_status` WRITE;
-/*!40000 ALTER TABLE `student_status` DISABLE KEYS */;
-INSERT INTO `student_status` VALUES (1,'Active','Currently enrolled and taking classes'),(2,'Graduated','Completed program successfully'),(3,'Transferred','Moved to another school'),(4,'Withdrawn','Left the school voluntarily');
-/*!40000 ALTER TABLE `student_status` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `students`
@@ -234,16 +165,6 @@ CREATE TABLE `students` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `students`
---
-
-LOCK TABLES `students` WRITE;
-/*!40000 ALTER TABLE `students` DISABLE KEYS */;
-INSERT INTO `students` VALUES (1,'Nyarko','Stephen','1999-06-30','Male','C:\\Users\\Stephen\\School-Management-System\\SchoolMS\\SchoolMS\\bin\\Debug\\Images\\f70b4e4c-1691-4365-b4dd-190e5d048abe.PNG',1,NULL,1),(2,'Codjoe','Carl','1998-10-28','Male','C:\\Users\\Stephen\\Desktop\\blessing1.JPG',2,NULL,1),(3,'Dauda ','Ismael','2009-07-23','Male','C:\\Users\\Stephen\\School-Management-System\\SchoolMS\\SchoolMS\\bin\\Debug\\Images\\c4fc44fb-5494-4025-89df-6efda51a75c5.JPG',1,3,1),(5,'Clarke','David','2025-09-09','Male','C:\\Users\\Stephen\\School-Management-System\\SchoolMS\\SchoolMS\\bin\\Debug\\Images\\4eb1b2ec-efe4-47fa-b20e-57e8cc06fa55.PNG',3,3,1),(6,'Manu','Kwaku','2025-09-09','Male','C:\\Users\\Stephen\\AppData\\Local\\Temp\\Rar$EXa8856.11391.rartemp\\Images\\95f9b7d7-f5f4-47e8-a7fc-ac4a05378974.jpg',2,2,1);
-/*!40000 ALTER TABLE `students` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `term`
 --
 
@@ -262,16 +183,6 @@ CREATE TABLE `term` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `term`
---
-
-LOCK TABLES `term` WRITE;
-/*!40000 ALTER TABLE `term` DISABLE KEYS */;
-INSERT INTO `term` VALUES (1,1,'First Term',1),(2,1,'Second Term',2),(3,1,'Third Term',3),(7,2,'First Term',1),(8,2,'Second Term',2),(9,2,'Third Term',3);
-/*!40000 ALTER TABLE `term` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `users`
 --
 
@@ -286,16 +197,6 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `users`
---
-
-LOCK TABLES `users` WRITE;
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'admin','admin123','Admin'),(2,'teacher1','teach123','Teacher');
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -306,4 +207,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-09-11 18:45:16
+-- Dump completed on 2025-09-11 20:40:54
