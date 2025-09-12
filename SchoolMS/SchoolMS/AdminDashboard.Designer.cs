@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
@@ -45,28 +45,30 @@
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartEnrolment = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBoxTotalClasses = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.groupBoxTotalAttendance = new System.Windows.Forms.GroupBox();
+            this.lblTodayAttendance = new System.Windows.Forms.Label();
             this.groupBoxFeeOwe = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBoxTotalStudents = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LblTotalStudents = new System.Windows.Forms.Label();
             this.groupBoxTotalTeachers = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dgvAbsentees = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartEnrolment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
-            this.groupBoxTotalClasses.SuspendLayout();
+            this.groupBoxTotalAttendance.SuspendLayout();
             this.groupBoxFeeOwe.SuspendLayout();
             this.groupBoxTotalStudents.SuspendLayout();
             this.groupBoxTotalTeachers.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAbsentees)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -196,44 +198,44 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.chart1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.chartEnrolment, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.chart2, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(9, 163);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(591, 158);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(591, 119);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
-            // chart1
+            // chartEnrolment
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(3, 3);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(209, 152);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
+            chartArea3.Name = "ChartArea1";
+            this.chartEnrolment.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartEnrolment.Legends.Add(legend3);
+            this.chartEnrolment.Location = new System.Drawing.Point(3, 3);
+            this.chartEnrolment.Name = "chartEnrolment";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chartEnrolment.Series.Add(series3);
+            this.chartEnrolment.Size = new System.Drawing.Size(209, 113);
+            this.chartEnrolment.TabIndex = 0;
+            this.chartEnrolment.Text = "chart1";
             // 
             // chart2
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
+            chartArea4.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart2.Legends.Add(legend4);
             this.chart2.Location = new System.Drawing.Point(298, 3);
             this.chart2.Name = "chart2";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(211, 152);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chart2.Series.Add(series4);
+            this.chart2.Size = new System.Drawing.Size(211, 113);
             this.chart2.TabIndex = 1;
             this.chart2.Text = "chart2";
             // 
@@ -244,7 +246,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Controls.Add(this.groupBoxTotalClasses, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.groupBoxTotalAttendance, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.groupBoxFeeOwe, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.groupBoxTotalStudents, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.groupBoxTotalTeachers, 2, 0);
@@ -255,25 +257,25 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(597, 135);
             this.tableLayoutPanel2.TabIndex = 5;
             // 
-            // groupBoxTotalClasses
+            // groupBoxTotalAttendance
             // 
-            this.groupBoxTotalClasses.Controls.Add(this.label3);
-            this.groupBoxTotalClasses.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxTotalClasses.Location = new System.Drawing.Point(450, 3);
-            this.groupBoxTotalClasses.Name = "groupBoxTotalClasses";
-            this.groupBoxTotalClasses.Size = new System.Drawing.Size(144, 74);
-            this.groupBoxTotalClasses.TabIndex = 2;
-            this.groupBoxTotalClasses.TabStop = false;
-            this.groupBoxTotalClasses.Text = "Total Classes";
+            this.groupBoxTotalAttendance.Controls.Add(this.lblTodayAttendance);
+            this.groupBoxTotalAttendance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxTotalAttendance.Location = new System.Drawing.Point(450, 3);
+            this.groupBoxTotalAttendance.Name = "groupBoxTotalAttendance";
+            this.groupBoxTotalAttendance.Size = new System.Drawing.Size(144, 74);
+            this.groupBoxTotalAttendance.TabIndex = 2;
+            this.groupBoxTotalAttendance.TabStop = false;
+            this.groupBoxTotalAttendance.Text = "Total Attendance";
             // 
-            // label3
+            // lblTodayAttendance
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 33);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 15);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "label3";
+            this.lblTodayAttendance.AutoSize = true;
+            this.lblTodayAttendance.Location = new System.Drawing.Point(30, 33);
+            this.lblTodayAttendance.Name = "lblTodayAttendance";
+            this.lblTodayAttendance.Size = new System.Drawing.Size(83, 15);
+            this.lblTodayAttendance.TabIndex = 0;
+            this.lblTodayAttendance.Text = "Total Attend";
             // 
             // groupBoxFeeOwe
             // 
@@ -291,13 +293,13 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(16, 32);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 13);
+            this.label4.Size = new System.Drawing.Size(72, 13);
             this.label4.TabIndex = 0;
-            this.label4.Text = "label4";
+            this.label4.Text = "Total Owed";
             // 
             // groupBoxTotalStudents
             // 
-            this.groupBoxTotalStudents.Controls.Add(this.label1);
+            this.groupBoxTotalStudents.Controls.Add(this.LblTotalStudents);
             this.groupBoxTotalStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxTotalStudents.Location = new System.Drawing.Point(152, 3);
             this.groupBoxTotalStudents.Name = "groupBoxTotalStudents";
@@ -306,14 +308,14 @@
             this.groupBoxTotalStudents.TabStop = false;
             this.groupBoxTotalStudents.Text = "Total Students";
             // 
-            // label1
+            // LblTotalStudents
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.LblTotalStudents.AutoSize = true;
+            this.LblTotalStudents.Location = new System.Drawing.Point(29, 33);
+            this.LblTotalStudents.Name = "LblTotalStudents";
+            this.LblTotalStudents.Size = new System.Drawing.Size(97, 15);
+            this.LblTotalStudents.TabIndex = 0;
+            this.LblTotalStudents.Text = "Total students";
             // 
             // groupBoxTotalTeachers
             // 
@@ -337,6 +339,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.dgvAbsentees);
             this.panel3.Controls.Add(this.tableLayoutPanel2);
             this.panel3.Controls.Add(this.tableLayoutPanel1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -344,6 +347,15 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(600, 350);
             this.panel3.TabIndex = 2;
+            // 
+            // dgvAbsentees
+            // 
+            this.dgvAbsentees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAbsentees.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvAbsentees.Location = new System.Drawing.Point(0, 276);
+            this.dgvAbsentees.Name = "dgvAbsentees";
+            this.dgvAbsentees.Size = new System.Drawing.Size(600, 74);
+            this.dgvAbsentees.TabIndex = 6;
             // 
             // AdminDashboard
             // 
@@ -357,11 +369,11 @@
             this.Text = "AdminDashboard";
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartEnrolment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.groupBoxTotalClasses.ResumeLayout(false);
-            this.groupBoxTotalClasses.PerformLayout();
+            this.groupBoxTotalAttendance.ResumeLayout(false);
+            this.groupBoxTotalAttendance.PerformLayout();
             this.groupBoxFeeOwe.ResumeLayout(false);
             this.groupBoxFeeOwe.PerformLayout();
             this.groupBoxTotalStudents.ResumeLayout(false);
@@ -369,6 +381,7 @@
             this.groupBoxTotalTeachers.ResumeLayout(false);
             this.groupBoxTotalTeachers.PerformLayout();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAbsentees)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -386,17 +399,18 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartEnrolment;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.GroupBox groupBoxTotalClasses;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBoxTotalAttendance;
+        private System.Windows.Forms.Label lblTodayAttendance;
         private System.Windows.Forms.GroupBox groupBoxFeeOwe;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBoxTotalStudents;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LblTotalStudents;
         private System.Windows.Forms.GroupBox groupBoxTotalTeachers;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridView dgvAbsentees;
     }
 }
