@@ -38,7 +38,6 @@
             this.radioFemale = new System.Windows.Forms.RadioButton();
             this.datePickerDOB = new System.Windows.Forms.DateTimePicker();
             this.comboReligion = new System.Windows.Forms.ComboBox();
-            this.dataGridStudents = new System.Windows.Forms.DataGridView();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -57,10 +56,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridStudents)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridStudents = new System.Windows.Forms.DataGridView();
             this.grpSearch.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudent)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridStudents)).BeginInit();
             this.SuspendLayout();
             // 
             // txtLastName
@@ -72,7 +74,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(9, 203);
+            this.btnSave.Location = new System.Drawing.Point(9, 191);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 6;
@@ -82,7 +84,7 @@
             // 
             // btnTestConn
             // 
-            this.btnTestConn.Location = new System.Drawing.Point(265, 203);
+            this.btnTestConn.Location = new System.Drawing.Point(265, 191);
             this.btnTestConn.Name = "btnTestConn";
             this.btnTestConn.Size = new System.Drawing.Size(75, 23);
             this.btnTestConn.TabIndex = 10;
@@ -92,9 +94,10 @@
             // LastName
             // 
             this.LastName.AutoSize = true;
+            this.LastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastName.Location = new System.Drawing.Point(6, 26);
             this.LastName.Name = "LastName";
-            this.LastName.Size = new System.Drawing.Size(58, 13);
+            this.LastName.Size = new System.Drawing.Size(67, 13);
             this.LastName.TabIndex = 3;
             this.LastName.Text = "Last Name";
             // 
@@ -108,9 +111,10 @@
             // FirstName
             // 
             this.FirstName.AutoSize = true;
+            this.FirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstName.Location = new System.Drawing.Point(6, 52);
             this.FirstName.Name = "FirstName";
-            this.FirstName.Size = new System.Drawing.Size(57, 13);
+            this.FirstName.Size = new System.Drawing.Size(67, 13);
             this.FirstName.TabIndex = 5;
             this.FirstName.Text = "First Name";
             // 
@@ -152,22 +156,10 @@
             this.comboReligion.Size = new System.Drawing.Size(121, 21);
             this.comboReligion.TabIndex = 5;
             // 
-            // dataGridStudents
-            // 
-            this.dataGridStudents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridStudents.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridStudents.Location = new System.Drawing.Point(0, 0);
-            this.dataGridStudents.Name = "dataGridStudents";
-            this.dataGridStudents.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridStudents.Size = new System.Drawing.Size(750, 450);
-            this.dataGridStudents.TabIndex = 7;
-            this.dataGridStudents.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridStudents_CellClick);
-            // 
             // btnUpdate
             // 
             this.btnUpdate.Enabled = false;
-            this.btnUpdate.Location = new System.Drawing.Point(93, 203);
+            this.btnUpdate.Location = new System.Drawing.Point(93, 191);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 9;
@@ -178,7 +170,7 @@
             // btnDelete
             // 
             this.btnDelete.Enabled = false;
-            this.btnDelete.Location = new System.Drawing.Point(174, 203);
+            this.btnDelete.Location = new System.Drawing.Point(174, 191);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 8;
@@ -272,7 +264,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(750, 255);
+            this.groupBox1.Size = new System.Drawing.Size(750, 220);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Details";
@@ -323,6 +315,7 @@
             // 
             // pictureBoxStudent
             // 
+            this.pictureBoxStudent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxStudent.Location = new System.Drawing.Point(336, 19);
             this.pictureBoxStudent.Name = "pictureBoxStudent";
             this.pictureBoxStudent.Size = new System.Drawing.Size(113, 104);
@@ -357,6 +350,26 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Gender";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dataGridStudents);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 220);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(750, 230);
+            this.panel1.TabIndex = 15;
+            // 
+            // dataGridStudents
+            // 
+            this.dataGridStudents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridStudents.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridStudents.Location = new System.Drawing.Point(0, 0);
+            this.dataGridStudents.Name = "dataGridStudents";
+            this.dataGridStudents.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridStudents.Size = new System.Drawing.Size(750, 230);
+            this.dataGridStudents.TabIndex = 9;
+            // 
             // StudentRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -364,17 +377,18 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(750, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridStudents);
             this.Name = "StudentRegistration";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.StudentRegistration_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridStudents)).EndInit();
             this.grpSearch.ResumeLayout(false);
             this.grpSearch.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudent)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridStudents)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -391,7 +405,6 @@
         private System.Windows.Forms.RadioButton radioFemale;
         private System.Windows.Forms.DateTimePicker datePickerDOB;
         private System.Windows.Forms.ComboBox comboReligion;
-        private System.Windows.Forms.DataGridView dataGridStudents;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.TextBox txtSearch;
@@ -410,6 +423,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboStatus;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dataGridStudents;
     }
 }
 

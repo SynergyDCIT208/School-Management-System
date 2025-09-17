@@ -71,8 +71,8 @@ namespace SchoolMS
 
                         if (selectedRole == "Admin")
                         {
-                            AdminDashboard adminDashboardForm = new AdminDashboard();
-                            adminDashboardForm.Show();
+                            MainDashboard mdminDashboardForm = new MainDashboard();
+                            mdminDashboardForm.Show();
                         }
                         else if (selectedRole == "Teacher")
                         {
@@ -107,6 +107,11 @@ namespace SchoolMS
             txtUserName.Clear();
             txtPassword.Clear();
             txtUserName.Focus();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

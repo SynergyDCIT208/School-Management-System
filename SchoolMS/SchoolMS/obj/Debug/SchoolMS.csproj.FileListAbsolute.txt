@@ -197,3 +197,5 @@ C:\Users\Stephen\School-Management-System\SchoolMS\SchoolMS\obj\Debug\SchoolMS.L
 C:\Users\Stephen\School-Management-System\SchoolMS\SchoolMS\obj\Debug\SchoolMS.MainForm.resources
 C:\Users\Stephen\School-Management-System\SchoolMS\SchoolMS\obj\Debug\SchoolMS.SchoolDashboardForm.resources
 C:\Users\Stephen\School-Management-System\SchoolMS\SchoolMS\obj\Debug\SchoolMS.FormCreateBill.resources
+C:\Users\Stephen\School-Management-System\SchoolMS\SchoolMS\obj\Debug\SchoolMS.MainDashboard.resources
+C:\Users\Stephen\School-Management-System\SchoolMS\SchoolMS\obj\Debug\SchoolMS.adminDash.resources

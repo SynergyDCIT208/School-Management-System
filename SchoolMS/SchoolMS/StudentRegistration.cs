@@ -332,7 +332,7 @@ namespace SchoolMS
                         // Default: select last row (new entry)
                         int lastRowIndex = dataGridStudents.Rows.Count - 1;
                         dataGridStudents.Rows[lastRowIndex].Selected = true;
-                        dataGridStudents.FirstDisplayedScrollingRowIndex = lastRowIndex;
+                      //  dataGridStudents.FirstDisplayedScrollingRowIndex = lastRowIndex;
                         ClearForm();
                         SetMode(true);
                     }

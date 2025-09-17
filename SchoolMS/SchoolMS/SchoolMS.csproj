@@ -117,6 +117,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminDash.Designer.cs">
+      <DependentUpon>adminDash.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,12 @@
     </Compile>
     <Compile Include="FormDashBoard.Designer.cs">
       <DependentUpon>FormDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainDashboard.Designer.cs">
+      <DependentUpon>MainDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="StudentRegistration.cs">
       <SubType>Form</SubType>
@@ -168,6 +180,10 @@
     <Compile Include="SchoolDashboardForm.Designer.cs">
       <DependentUpon>SchoolDashboardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemeColor.cs" />
+    <EmbeddedResource Include="adminDash.resx">
+      <DependentUpon>adminDash.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDashBoard.resx">
       <DependentUpon>FormDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainDashboard.resx">
+      <DependentUpon>MainDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentRegistration.resx">
       <DependentUpon>StudentRegistration.cs</DependentUpon>

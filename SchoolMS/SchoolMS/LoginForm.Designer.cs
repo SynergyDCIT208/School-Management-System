@@ -37,6 +37,7 @@
             this.LabelSMSLogin = new System.Windows.Forms.Label();
             this.labelRole = new System.Windows.Forms.Label();
             this.cmbRole = new System.Windows.Forms.ComboBox();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelUserName
@@ -106,7 +107,7 @@
             // labelRole
             // 
             this.labelRole.AutoSize = true;
-            this.labelRole.Location = new System.Drawing.Point(243, 54);
+            this.labelRole.Location = new System.Drawing.Point(173, 83);
             this.labelRole.Name = "labelRole";
             this.labelRole.Size = new System.Drawing.Size(29, 13);
             this.labelRole.TabIndex = 7;
@@ -123,11 +124,22 @@
             this.cmbRole.Size = new System.Drawing.Size(121, 21);
             this.cmbRole.TabIndex = 8;
             // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(539, 218);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 9;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.cmbRole);
             this.Controls.Add(this.labelRole);
             this.Controls.Add(this.LabelSMSLogin);
@@ -156,5 +168,6 @@
         private System.Windows.Forms.Label LabelSMSLogin;
         private System.Windows.Forms.Label labelRole;
         private System.Windows.Forms.ComboBox cmbRole;
+        private System.Windows.Forms.Button btnExit;
     }
 }
